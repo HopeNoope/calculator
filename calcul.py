@@ -22,12 +22,12 @@ while flag:
     while flag_internal:
         num2 = input("Введите второе число: ")
         if is_digit(num2) == False:
-            print("Некорректное значение")
+            print("Некорректное выражение")
             continue
         break
 
     while flag_internal:
-        op = input("Выберите операцию: ")
+        op = input("Введите операцию: ")
         if not (op == '+' or op == '-' or op == '*' or op == '/'):
             print("Некорректное значение")
             continue
@@ -48,18 +48,18 @@ while flag:
     input_errors = 0
     res = ''
     while flag_internal:
-        res = input("Начать сначала? (Да/Нет)")
+        res = input("Хотите начать сначала? (да/нет)")
         if input_errors >= 2:
             res = 'нет'
             break
         if not (res.lower() == 'да' or res.lower() == 'нет'):
             input_errors += 1
-            print("Некорректное выражение")
+            print("Incorrect input")
             continue
         break
 
-    if res.lower() == 'Да':
+    if res.lower() == 'да':
         continue
-    if res.lower() == 'Нет':
+    if res.lower() == 'нет':
         break
 

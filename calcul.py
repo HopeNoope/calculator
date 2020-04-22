@@ -49,7 +49,9 @@ while flag:
     res = ''
     while flag_internal:
         res = input("Хотите начать сначала? (да/нет)")
-        if input_errors >= 2:
+        if res.lower() == 'да':
+            break
+        if input_errors >=2:
             res = 'нет'
             break
         if not (res.lower() == 'да' or res.lower() == 'нет'):
@@ -62,4 +64,3 @@ while flag:
         continue
     if res.lower() == 'нет':
         break
-

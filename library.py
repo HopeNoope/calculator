@@ -8,6 +8,7 @@ for line in config:
     val = ""
     try:
         val = line.split()[1]
+        val += " " + line.split()[2]
     except IndexError:
         val = "параметр {" + key + "} не имеет значения"
     dictionary.update({key: val})

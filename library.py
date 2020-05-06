@@ -10,7 +10,8 @@ for line in config:
         val = line.split()[1]
         val += " " + line.split()[2]
     except IndexError:
-        val = "параметр {" + key + "} не имеет значения"
+        if val == "":
+            val = "параметр {" + key + "} не имеет значения"
     dictionary.update({key: val})
 
 flag = True
